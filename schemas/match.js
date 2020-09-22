@@ -4,82 +4,40 @@ export default {
   type: "document",
   fields: [
     {
-      title: "Match date",
+      title: "Match Date",
       name: "matchDate",
       type: "date",
+      validation: (Rule) => Rule.required(),
     },
     {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
-      options: {
-        source: "title",
-        maxLength: 96,
-      },
+      title: "Starting Score",
+      name: "startingScore",
+      type: "number",
+      validation: (Rule) => Rule.required().min(60).max(120),
     },
     {
-      title: "Default variant",
-      name: "defaultProductVariant",
-      type: "productVariant",
+      title: "Final Score",
+      name: "finalScore",
+      type: "number",
+      validation: (Rule) => Rule.required().min(60).max(120),
     },
     {
-      title: "Variants",
-      name: "variants",
-      type: "array",
-      of: [
-        {
-          title: "Variant",
-          type: "productVariant",
-        },
-      ],
-    },
-    {
-      title: "Tags",
-      name: "tags",
-      type: "array",
-      of: [
-        {
-          type: "string",
-        },
-      ],
-      options: {
-        layout: "tags",
-      },
-    },
-    {
-      name: "vendor",
-      title: "Vendor",
+      title: "Calling Player",
+      name: "callingPlayer",
       type: "reference",
-      to: { type: "vendor" },
+      to: { type: "player" },
+      validation: (Rule) => Rule.required(),
     },
     {
-      name: "blurb",
-      title: "Blurb",
-      type: "localeString",
-    },
-    {
-      name: "categories",
-      title: "Categories",
+      title: "Players",
+      name: "players",
       type: "array",
       of: [
         {
           type: "reference",
-          to: { type: "category" },
+          to: { type: "matchPlayer" },
         },
       ],
     },
-    {
-      name: "body",
-      title: "Body",
-      type: "localeBlockContent",
-    },
   ],
-
-  preview: {
-    select: {
-      title: "title",
-      manufactor: "manufactor.title",
-      media: "defaultProductVariant.images[0]",
-    },
-  },
 };
