@@ -30,6 +30,7 @@ export default {
     },
   ],
   initialValue: {
+    win: false,
     penaltyPoint: false,
   },
 };

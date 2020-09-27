@@ -40,11 +40,6 @@ export default {
           }
         }
       ]
-    },
-    {
-      title: 'Bar code',
-      name: 'barcode',
-      type: 'barcode'
     }
   ]
 }

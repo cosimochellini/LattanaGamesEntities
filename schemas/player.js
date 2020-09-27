@@ -43,5 +43,25 @@ export default {
         },
       ],
     },
+    {
+      title: "Pin",
+      name: "pin",
+      type: "number",
+      validation: (Rule) => Rule.required().integer().max(9999),
+    },
+    {
+      title: "Profile Image",
+      name: "profileImage",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
   ],
+  initialValue: {
+    name: "Mario",
+    surname: "Rossi",
+    email: "mario.rossi@email.com",
+    pin: 0,
+  },
 };
