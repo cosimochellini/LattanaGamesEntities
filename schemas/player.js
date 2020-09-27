@@ -33,13 +33,24 @@ export default {
       type: "date",
     },
     {
-      title: "Matches",
-      name: "matches",
+      title: "Trump Matches",
+      name: "trumpMatches",
       type: "array",
       of: [
         {
           type: "reference",
-          to: { type: "match" },
+          to: { type: "trumpMatch" },
+        },
+      ],
+    },
+    {
+      title: "Roles",
+      name: "roles",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: { type: "playerRole" },
         },
       ],
     },

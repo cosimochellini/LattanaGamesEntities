@@ -1,6 +1,6 @@
 export default {
-  title: "MatchPlayer",
-  name: "matchPlayer",
+  title: "Trump Match Player",
+  name: "trumpMatchPlayer",
   type: "document",
   fields: [
     {
@@ -22,10 +22,10 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: "Match",
-      name: "match",
+      title: "Trump Match",
+      name: "trumpMatch",
       type: "reference",
-      to: { type: "match" },
+      to: { type: "trumpMatch" },
       validation: (Rule) => Rule.required(),
     },
   ],

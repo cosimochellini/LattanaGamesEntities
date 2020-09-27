@@ -4,20 +4,22 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // We import object and document schemas
-import blockContent from "./blockContent";
-import category from "./category";
-import product from "./product";
-import vendor from "./vendor";
-import productVariant from "./productVariant";
+// import blockContent from "./blockContent";
+// import category from "./category";
+// import product from "./product";
+// import vendor from "./vendor";
+// import productVariant from "./productVariant";
 
 // My imports
-import match from "./match";
+import role from "./role";
 import player from "./player";
-import matchPlayer from "./mathPlayer";
+import playerRole from "./playerRole";
+import trumpMatch from "./trumpMatch";
+import trumpMatchPlayer from "./trumpMatchPlayer";
 
-import localeString from "./locale/String";
-import localeText from "./locale/Text";
-import localeBlockContent from "./locale/BlockContent";
+// import localeString from "./locale/String";
+// import localeText from "./locale/Text";
+// import localeBlockContent from "./locale/BlockContent";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,20 +30,21 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    product,
-    vendor,
-    category,
-
-    match,
+    // product,
+    // vendor,
+    // category,
+    role,
     player,
-    matchPlayer,
-    
+    playerRole,
+    trumpMatch,
+    trumpMatchPlayer,
+
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
-    blockContent,
-    localeText,
-    localeBlockContent,
-    localeString,
-    productVariant,
+    // blockContent,
+    // localeText,
+    // localeBlockContent,
+    // localeString,
+    // productVariant,
   ]),
 });

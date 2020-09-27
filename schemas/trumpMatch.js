@@ -1,6 +1,6 @@
 export default {
-  name: "match",
-  title: "Match",
+  title: "Trump Match",
+  name: "trumpMatch",
   type: "document",
   fields: [
     {
@@ -35,7 +35,7 @@ export default {
       of: [
         {
           type: "reference",
-          to: { type: "matchPlayer" },
+          to: { type: "player" },
         },
       ],
     },
