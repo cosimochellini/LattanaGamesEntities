@@ -16,8 +16,8 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: "Nikname",
-      name: "nikname",
+      title: "Nickname",
+      name: "nickname",
       type: "string",
       validation: (Rule) => Rule.required(),
     },
