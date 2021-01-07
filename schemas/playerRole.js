@@ -18,4 +18,16 @@ export default {
       validation: (Rule) => Rule.required(),
     },
   ],
+  preview: {
+    select: {
+      player: "player.nickname",
+      role: "role.name",
+    },
+    prepare(selection) {
+      const { player, role } = selection;
+      return {
+        title: `${player} - ${role}`,
+      };
+    },
+  },
 };

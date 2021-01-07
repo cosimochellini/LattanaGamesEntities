@@ -1,3 +1,5 @@
+import { dateFormatter } from "../utils/dateFormatter";
+
 export default {
   title: "Trump Match Player",
   name: "trumpMatchPlayer",
@@ -32,5 +34,21 @@ export default {
   initialValue: {
     win: false,
     penaltyPoint: false,
+  },
+  preview: {
+    select: {
+      title: "player.nickname",
+      date: "trumpMatch.matchDate",
+      win: "win",
+      media: "player.profileImage",
+    },
+    prepare(selection) {
+      const { title, date, win, media } = selection;
+      return {
+        title: `${title}, ${win ? "win" : "defeat"}`,
+        subtitle: dateFormatter(date), // YYYY-MM-DD --> YYYY
+        media,
+      };
+    },
   },
 };

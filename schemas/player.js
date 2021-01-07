@@ -64,4 +64,20 @@ export default {
     email: "mario.rossi@email.com",
     pin: 0,
   },
+  preview: {
+    select: {
+      title: "nickname",
+      media: "profileImage",
+      name: "name",
+      surname: "surname",
+    },
+    prepare(player) {
+      const { title, media, name, surname } = player;
+      return {
+        title,
+        media,
+        subtitle: `${name} ${surname}`,
+      };
+    },
+  },
 };

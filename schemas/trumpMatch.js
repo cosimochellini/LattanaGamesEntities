@@ -1,3 +1,5 @@
+import { dateFormatter } from "../utils/dateFormatter";
+
 export default {
   title: "Trump Match",
   name: "trumpMatch",
@@ -40,4 +42,19 @@ export default {
       ],
     },
   ],
+  preview: {
+    select: {
+      title: "callingPlayer.nickname",
+      date: "matchDate",
+      startingScore: "startingScore",
+      finalScore: "finalScore",
+    },
+    prepare(selection) {
+      const { title, date, startingScore, finalScore } = selection;
+      return {
+        title: `${title} ${startingScore} -> ${finalScore}`,
+        subtitle: dateFormatter(date), // YYYY-MM-DD --> YYYY
+      };
+    },
+  },
 };
