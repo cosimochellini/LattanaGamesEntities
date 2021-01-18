@@ -1,8 +1,8 @@
 import { dateFormatter } from "../utils/dateFormatter";
 
 export default {
-  title: "Trump Match Player",
-  name: "trumpMatchPlayer",
+  title: "Secret Hitler Match Player",
+  name: "secretHitlerMatchPlayer",
   type: "document",
   fields: [
     {
@@ -17,6 +17,11 @@ export default {
       type: "boolean",
     },
     {
+      title: "Liberal",
+      name: "liberal",
+      type: "boolean",
+    },
+    {
       title: "Player",
       name: "player",
       type: "reference",
@@ -24,10 +29,10 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      title: "Trump Match",
+      title: "Secret Hitler Match",
       name: "match",
       type: "reference",
-      to: { type: "trumpMatch" },
+      to: { type: "secretHitlerMatch" },
       validation: (Rule) => Rule.required(),
     },
   ],
@@ -38,7 +43,7 @@ export default {
   preview: {
     select: {
       title: "player.nickname",
-      date: "trumpMatch.matchDate",
+      date: "match.matchDate",
       win: "win",
       media: "player.profileImage",
     },

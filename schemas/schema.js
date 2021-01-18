@@ -14,8 +14,12 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import role from "./role";
 import player from "./player";
 import playerRole from "./playerRole";
+
 import trumpMatch from "./trumpMatch";
 import trumpMatchPlayer from "./trumpMatchPlayer";
+
+import secretHitlerMatch from "./secretHitlerMatch";
+import secretHitlerMatchPlayer from "./secretHitlerMatchPlayer";
 
 // import localeString from "./locale/String";
 // import localeText from "./locale/Text";
@@ -38,6 +42,9 @@ export default createSchema({
     playerRole,
     trumpMatch,
     trumpMatchPlayer,
+
+    secretHitlerMatch,
+    secretHitlerMatchPlayer
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
