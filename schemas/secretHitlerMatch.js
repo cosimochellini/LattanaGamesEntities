@@ -23,8 +23,8 @@ export default {
       ],
     },
     {
-      title: "Winning faction",
-      name: "winningFaction",
+      title: "Winning role",
+      name: "winningRole",
       type: "string",
       validation: (Rule) => Rule.required(),
     },

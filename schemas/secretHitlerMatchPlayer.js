@@ -17,9 +17,9 @@ export default {
       type: "boolean",
     },
     {
-      title: "Liberal",
-      name: "liberal",
-      type: "boolean",
+      title: "Role",
+      name: "role",
+      type: "string",
     },
     {
       title: "Player",
