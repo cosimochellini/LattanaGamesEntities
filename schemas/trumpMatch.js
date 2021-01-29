@@ -1,4 +1,5 @@
 import { dateFormatter } from "../utils/dateFormatter";
+import { baseMatch } from "./base/matchBaseFields";
 
 export default {
   title: "Trump Match",
@@ -21,7 +22,7 @@ export default {
       title: "Final Score",
       name: "finalScore",
       type: "number",
-      validation: (Rule) => Rule.required().min(60).max(120),
+      validation: (Rule) => Rule.required().min(0).max(120),
     },
     {
       title: "Calling Player",
@@ -41,6 +42,7 @@ export default {
         },
       ],
     },
+    ...baseMatch,
   ],
   preview: {
     select: {

@@ -1,4 +1,5 @@
 import { dateFormatter } from "../utils/dateFormatter";
+import { baseMatch } from "./base/matchBaseFields";
 
 export default {
   title: "Secret Hitler Match",
@@ -28,6 +29,7 @@ export default {
       type: "string",
       validation: (Rule) => Rule.required(),
     },
+    ...baseMatch,
   ],
   preview: {
     select: {
