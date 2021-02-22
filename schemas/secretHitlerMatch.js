@@ -33,15 +33,13 @@ export default {
   ],
   preview: {
     select: {
-      title: "callingPlayer.nickname",
+      title: "winningRole",
       date: "matchDate",
-      startingScore: "startingScore",
-      finalScore: "finalScore",
     },
     prepare(selection) {
-      const { title, date, startingScore, finalScore } = selection;
+      const { title, date } = selection;
       return {
-        title: `${title} ${startingScore} -> ${finalScore}`,
+        title: `${title}`,
         subtitle: dateFormatter(date), // YYYY-MM-DD --> YYYY
       };
     },

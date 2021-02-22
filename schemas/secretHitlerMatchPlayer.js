@@ -43,14 +43,15 @@ export default {
   preview: {
     select: {
       title: "player.nickname",
+      role: "role",
       date: "match.matchDate",
       win: "win",
       media: "player.profileImage",
     },
     prepare(selection) {
-      const { title, date, win, media } = selection;
+      const { title, role, date, win, media } = selection;
       return {
-        title: `${title}, ${win ? "win" : "defeat"}`,
+        title: `${title}@${role}, ${win ? "win" : "defeat"}`,
         subtitle: dateFormatter(date), // YYYY-MM-DD --> YYYY
         media,
       };
