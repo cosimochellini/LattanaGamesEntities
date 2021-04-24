@@ -35,13 +35,7 @@ export default {
     {
       title: "Roles",
       name: "roles",
-      type: "array",
-      of: [
-        {
-          type: "reference",
-          to: { type: "playerRole" },
-        },
-      ],
+      type: "string",
     },
     {
       title: "Pin",

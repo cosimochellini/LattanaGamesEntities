@@ -11,9 +11,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 // import productVariant from "./productVariant";
 
 // My imports
-import role from "./role";
 import player from "./player";
-import playerRole from "./playerRole";
 
 import trumpMatch from "./trumpMatch";
 import trumpMatchPlayer from "./trumpMatchPlayer";
@@ -37,14 +35,12 @@ export default createSchema({
     // product,
     // vendor,
     // category,
-    role,
     player,
-    playerRole,
     trumpMatch,
     trumpMatchPlayer,
 
     secretHitlerMatch,
-    secretHitlerMatchPlayer
+    secretHitlerMatchPlayer,
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
